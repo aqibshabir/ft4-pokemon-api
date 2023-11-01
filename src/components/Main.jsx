@@ -12,7 +12,6 @@ const Main = () => {
   //Functions
   const getPokemon = async () => {
     const { data } = await axios.get(url);
-    console.log(data);
 
     setUrl(data.next);
 
@@ -39,15 +38,17 @@ const Main = () => {
   return (
     <>
       <Heading />
-      {pokemon.map((p, i) => (
-        <Card
-          id={p.id}
-          name={p.name}
-          image={p.sprites.other.dream_world.front_default}
-          type={p.types[0].type.name}
-          key={i}
-        />
-      ))}
+      <div className="pokemonContainer">
+        {pokemon.map((p, i) => (
+          <Card
+            id={p.id}
+            name={p.name}
+            image={p.sprites.other.dream_world.front_default}
+            type={p.types[0].type.name}
+            key={i}
+          />
+        ))}
+      </div>
       <Controls getPokemon={getPokemon} />
     </>
   );

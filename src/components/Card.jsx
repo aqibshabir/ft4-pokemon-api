@@ -13,7 +13,7 @@ const Card = ({ id, name, image, type }) => {
         <h2>{name}</h2>
       </div>
       <div className="type">
-        <h3>Type: {type} </h3>
+        <h3>{type}</h3>
       </div>
     </div>
   );

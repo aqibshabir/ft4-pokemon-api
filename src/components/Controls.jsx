@@ -4,7 +4,7 @@ const Controls = ({ getPokemon }) => {
   return (
     <>
       <div className="buttonContainer">
-        <button onClick={() => getPokemon()}>Load more</button>
+        <button onClick={() => getPokemon("", 20)}>Load more</button>
       </div>
     </>
   );
